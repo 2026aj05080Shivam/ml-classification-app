@@ -94,6 +94,7 @@ Per-class recall on the test set is quoted below as Dropout / Enrolled / Graduat
 ## e. Streamlit app
 
 Features:
+
 1. **CSV upload** (sidebar) — upload `test_data.csv` or any file with the same 36 feature columns plus `Target`. A sample file can be downloaded from the sidebar.
 2. **Model selection dropdown** — choose any of the 5 saved models.
 3. **Evaluation metrics** — Accuracy, AUC, Precision, Recall, F1 and MCC for the chosen model.
