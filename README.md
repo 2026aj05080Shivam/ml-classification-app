@@ -34,7 +34,7 @@ Note that the classes are imbalanced: "Enrolled" is only 18% of the data.
 
 Repository link: **https://github.com/2026aj05080Shivam/ml-classification-app**
 
-Live Streamlit app: **<add your Streamlit app URL here>**
+Live Streamlit app: **https://ml-classification-2026aj05080.streamlit.app**
 
 ```
 ml-classification-app/
