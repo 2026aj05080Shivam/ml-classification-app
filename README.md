@@ -89,7 +89,7 @@ Per-class recall on the test set is quoted below as Dropout / Enrolled / Graduat
 | Naive Bayes | Weakest model on all metrics (Accuracy 0.659, MCC 0.428). The Gaussian, feature-independence assumption does not fit this data: many features are coded categories rather than continuous values, and the 1st- and 2nd-semester features are strongly correlated with each other (e.g. units enrolled r = 0.94, units approved r = 0.90). Enrolled recall is only 0.182. |
 | Support Vector Machine | A close second (Accuracy 0.758, AUC 0.866, MCC 0.599). It has the highest Dropout precision of all models (0.841), meaning a "Dropout" prediction from it is the most reliable, though Dropout recall (0.725) is lower than Logistic Regression's. The RBF kernel adds no clear gain over the linear model here. |
 
-**Overall winner: Logistic Regression.** It has the best accuracy, AUC, F1 and MCC, and it is also the fastest and easiest to interpret. SVM is a close second. All models find the **Enrolled** class hardest; it is the smallest class and lies between the other two outcomes. If catching every at-risk student matters more than overall accuracy, class weighting or resampling would be the next thing to try.
+**Overall winner: Logistic Regression.** It has the best accuracy, AUC, F1 and MCC, and it is also the fastest and easiest to interpret. SVM is a close second.
 
 ## e. Streamlit app
 
@@ -103,12 +103,3 @@ Features:
 
 The app only loads the `.joblib` files and calls `predict` / `predict_proba`. It never retrains.
 
-## f. How to run locally
-
-```bash
-pip install -r requirements.txt
-python train.py          # optional: regenerates model/ and test_data.csv
-streamlit run app.py
-```
-
-`requirements.txt` pins `scikit-learn==1.9.1` because the saved models must be loaded with the same scikit-learn version that created them.
